@@ -80,6 +80,12 @@ small,
     font: 500 10px/1.2 var(--mono);
     letter-spacing: .08em
 }
+.eyebrowAbout{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
 
 .top-meta {
     display: flex;
@@ -222,7 +228,8 @@ small,
 
 .tile-web {
     grid-area: web;
-    background: var(--lime)
+    /* background: var(--lime) */
+    background-color: #ffc558;
 }
 
 .tile-data {
@@ -616,12 +623,17 @@ small,
 }
 
 .about-layout {
-    max-width: 1120px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    /* max-width: 1120px;
     margin: 9vh auto;
     display: grid;
     grid-template-columns: 1.1fr .75fr;
     gap: 80px;
-    align-items: end
+    align-items: end */
 }
 
 .about-layout>div {
