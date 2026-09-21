@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MACROSAP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Exo+2:wght@500;600;700;800&family=Red+Hat+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="blueprint"></div>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Nexo inicio"><span class="brand-mark">M</span><span>MACROSAP<span class="slash">//</span></span></a>
+    <div class="top-meta"><span class="live-dot"></span> SOLUCIONES DIGITALES · MX</div>
+    <button class="menu-button" id="menuButton" aria-label="Abrir menú"><i></i><i></i></button>
+  </header>
+
+  <main id="app">
+    <section class="screen home-screen active" id="inicio" aria-label="Inicio">
+      <!-- <div class="intro"><p class="eyebrow">[ 01 — ESTUDIO DE TECNOLOGÍA ]</p><h1>Construimos<br><em>sistemas</em> que<br>mueven tu negocio.</h1></div> -->
+      
+      
+      
+      <div class="bento-grid">
+        <button class="tile tile-web service-trigger" data-service="web"><span class="tile-index">01</span><span class="tile-arrow">↗</span><div><small>PRODUCTO DIGITAL</small><h2>Desarrollo<br>web</h2><p>Experiencias que convierten.</p></div><span class="code">&lt;/&gt;</span></button>
+        <button class="tile tile-data service-trigger" data-service="data"><span class="tile-index">02</span><span class="tile-arrow">↗</span><div><small>ARQUITECTURA</small><h2>Bases de<br>datos</h2><p>Datos listos para decidir.</p></div><span class="data-lines">▥</span></button>
+        <button class="tile tile-access service-trigger" data-service="access"><span class="tile-index">03</span><span class="tile-arrow">↗</span><div><small>SEGURIDAD FÍSICA</small><h2>Control de<br>acceso</h2><p>Tu operación, conectada.</p><span class="scan-line"></span></div></button>
+        <article class="tile tile-hero">
+          <div class="hero-copy"><p class="eyebrow">MACROSAP</p><h2>Construimos sistemas<br>que<br>impulsan tu negocio.</h2><button class="outline-button" id="heroContact">HABLEMOS <b>→</b></button></div>
+          <div class="image-slider" aria-label="Proyectos destacados">
+            <img class="slide active" src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85" alt="Equipo trabajando en estrategia" />
+            <img class="slide" src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&q=85" alt="Equipo de desarrollo colaborando" />
+            <img class="slide" src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200&q=85" alt="Reunión de producto" />
+            <div class="slider-ui"><span id="slideCount">01 / 03</span><div class="slider-dots"><b></b><b></b><b></b></div></div>
+          </div>
+        </article>
+        <button class="tile tile-pos service-trigger" data-service="pos"><span class="tile-index">04</span><span class="tile-arrow">↗</span><div><small>COMERCIO CONECTADO</small><h2>Punto de<br>venta</h2><p>Vende más. Opera simple.</p></div><span class="receipt">$<br>▤</span></button>
+        <button class="tile tile-about" id="aboutButton"><span class="tile-index">05</span><span class="tile-arrow">↗</span><small>ACERCA DE NEXO</small><h2>Ingeniería<br>con propósito.</h2><div class="stat"><strong>12</strong><span>años creando<br>soluciones reales</span></div></button>
+        <button class="tile tile-faq" id="faqButton"><span class="tile-index">06</span><span class="tile-arrow">↗</span><small>¿TIENES DUDAS?</small><h2>FAQ<span class="blink">_</span></h2><p>Respuestas claras, sin letras pequeñas.</p></button>
+      </div>
+      <p class="scroll-cue">EXPLORA LOS MÓDULOS <span>↓</span></p>
+    </section>
+
+    <section class="screen detail-screen" id="detail" aria-live="polite">
+      <button class="back-button" id="backButton">← &nbsp;VOLVER AL GRID</button>
+      <div class="detail-layout">
+        <div class="detail-heading"><p class="eyebrow" id="detailKicker">01 — PRODUCTO DIGITAL</p><h2 id="detailTitle">Desarrollo web</h2><p id="detailLead"></p><button class="solid-button" id="moreButton">VER CAPACIDADES <span>+</span></button></div>
+        <div class="detail-visual" id="detailVisual"><div class="visual-grid"></div><div class="visual-number" id="detailNumber">01</div><div class="visual-label" id="detailLabel">WEB SYSTEMS</div></div>
+        <div class="detail-footer"><p id="detailFoot">Diseñamos y desarrollamos plataformas que hacen que lo complejo se sienta simple.</p><button class="contact-link" id="detailContact">INICIAR UN PROYECTO <b>↗</b></button></div>
+      </div>
+      <aside class="info-drawer" id="infoDrawer" aria-hidden="true"><button id="closeDrawer" aria-label="Cerrar">×</button><p class="eyebrow">CAPACIDADES / STACK</p><h3 id="drawerTitle">Lo que hacemos</h3><ul id="drawerList"></ul><p class="drawer-note">Cada proyecto parte de una sesión de descubrimiento para definir el mejor camino.</p></aside>
+    </section>
+
+    <section class="screen detail-screen" id="about">
+      <button class="back-button back-home">← &nbsp;VOLVER AL GRID</button><div class="about-layout"><p class="eyebrow">05 — ACERCA DE NEXO</p><h2>La tecnología<br>debe sentirse<br><em>natural.</em></h2><div><p>Somos un equipo multidisciplinario que convierte problemas operativos en productos digitales claros, robustos y escalables.</p><p>Trabajamos hombro a hombro con cada negocio, desde la primera idea hasta el despliegue.</p><button class="solid-button about-contact">CONOCE AL EQUIPO <span>↗</span></button></div></div>
+    </section>
+    <section class="screen detail-screen" id="faq">
+      <button class="back-button back-home">← &nbsp;VOLVER AL GRID</button><div class="faq-layout"><div><p class="eyebrow">06 — PREGUNTAS FRECUENTES</p><h2>Sin secretos.<br>Solo <em>claridad.</em></h2></div><div class="faq-list"><details open><summary>¿Con qué tipo de empresas trabajan?<b>+</b></summary><p>Con empresas que quieren digitalizar, ordenar o escalar su operación, sin importar el tamaño de su equipo.</p></details><details><summary>¿Pueden integrarse a mis sistemas actuales?<b>+</b></summary><p>Sí. Analizamos tu ecosistema actual y diseñamos integraciones seguras para evitar duplicar procesos.</p></details><details><summary>¿Cuánto tarda un proyecto?<b>+</b></summary><p>Depende del alcance. Te entregamos un plan de etapas y prioridades antes de iniciar el desarrollo.</p></details><details><summary>¿Dan soporte después del lanzamiento?<b>+</b></summary><p>Claro. Ofrecemos acompañamiento, monitoreo y evolución continua para tu producto.</p></details></div></div>
+    </section>
+  </main>
+  <div class="contact-modal" id="contactModal" aria-hidden="true"><div><button id="closeModal">×</button><p class="eyebrow">CONVERSEMOS</p><h2>¿Qué quieres<br><em>construir?</em></h2><a href="https://wa.me/5215555555555" target="_blank" rel="noopener">ESCRIBIR POR WHATSAPP ↗</a><a href="mailto:hola@nexo.mx">HOLA@NEXO.MX</a></div></div>
+  <a class="whatsapp" href="https://wa.me/5215555555555" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><span>◔</span><i>WHATSAPP</i></a>
+  <script src="script.js"></script>
+</body>
+</html>
