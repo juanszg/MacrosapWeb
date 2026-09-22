@@ -456,13 +456,14 @@ small,
     position: absolute;
     top: 96px;
     left: 5vw;
-    border: 0;
-    background: none;
+    border-radius: 1rem;
+    /* background: rgb(255, 230, 0); */
+background:var(--lime);
     color: var(--ink);
-    font: 500 10px var(--mono);
+    font: 600 14px var(--mono);
     letter-spacing: .08em;
     cursor: pointer;
-    padding: 0
+    padding: 1rem;
 }
 
 /* ANTES DE RESPONSIVE */
