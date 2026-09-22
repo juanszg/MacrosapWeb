@@ -24,9 +24,12 @@
       
       
       <div class="bento-grid">
-        <button class="tile tile-web service-trigger" data-service="web"><span class="tile-index">01</span><div><small>PRODUCTO DIGITAL</small><h2>Desarrollo<br>web</h2><p>Experiencias que convierten.</p></div><span class="code">&lt;/&gt;</span></button>
-        <button class="tile tile-data service-trigger" data-service="data"><span class="tile-index">02</span><div><small>ARQUITECTURA</small><h2>Bases de<br>datos</h2><p>Datos listos para decidir.</p></div><span class="data-lines">▥</span></button>
-        <button class="tile tile-access service-trigger" data-service="access"><span class="tile-index">03</span><div><small>SEGURIDAD FÍSICA</small><h2>Control de<br>acceso</h2><p>Tu operación, conectada.</p><span class="scan-line"></span></div></button>
+        <button class="tile tile-web service-trigger" data-service="web"><span class="tile-index">01</span><div><small>PRODUCTO DIGITAL</small><h2>Desarrollo<br>web</h2><p>Experiencias que convierten.</p></div></button>
+        <button class="tile tile-data service-trigger" data-service="data"><span class="tile-index">02</span><div><small>ARQUITECTURA</small><h2>Bases de<br>datos</h2><p>Datos listos para decidir.</p></div></button>
+        <!-- <span class="code">&lt;/&gt;</span> -->
+         <!-- <span class="data-lines">▥</span> -->
+        <button class="tile tile-access service-trigger" data-service="access"><span class="tile-index">03</span><div><small>SEGURIDAD FÍSICA</small><h2>Control de<br>acceso</h2><p>Tu operación, conectada.</p></div></button>
+        <!-- <span class="scan-line"></span> -->
         <article class="tile tile-hero">
           <div class="hero-copy"><p class="eyebrow">MACROSAP</p><h2>Construimos sistemas<br>que<br>impulsan tu negocio.</h2><button class="outline-button" id="heroContact">HABLEMOS <b>→</b></button></div>
           <div class="image-slider" aria-label="Proyectos destacados">
@@ -55,7 +58,14 @@
       <button class="back-button" id="backButton">← &nbsp;VOLVER AL GRID</button>
       <div class="detail-layout">
         <div class="detail-heading"><p class="eyebrow" id="detailKicker">01 — PRODUCTO DIGITAL</p><h2 id="detailTitle">Desarrollo web</h2><p id="detailLead"></p><button class="solid-button" id="moreButton">VER CAPACIDADES <span>+</span></button></div>
-        <div class="detail-visual" id="detailVisual"><div class="visual-grid"></div><div class="visual-number" id="detailNumber">01</div><div class="visual-label" id="detailLabel">WEB SYSTEMS</div></div>
+        <div class="detail-visual" id="detailVisual" aria-label="Collage visual del servicio">
+          <div class="collage-orbit"></div>
+          <figure class="collage-card collage-main"><img id="collageMain" src="" alt="" /></figure>
+          <figure class="collage-card collage-top"><img id="collageTop" src="" alt="" /></figure>
+          <figure class="collage-card collage-bottom"><img id="collageBottom" src="" alt="" /></figure>
+          <div class="collage-chip" id="detailLabel">WEB SYSTEMS</div>
+          <div class="collage-count" id="detailNumber">01</div>
+        </div>
         <div class="detail-footer"><p id="detailFoot">Diseñamos y desarrollamos plataformas que hacen que lo complejo se sienta simple.</p><button class="contact-link" id="detailContact">INICIAR UN PROYECTO <b>↗</b></button></div>
       </div>
       <aside class="info-drawer" id="infoDrawer" aria-hidden="true"><button id="closeDrawer" aria-label="Cerrar">×</button><p class="eyebrow">CAPACIDADES / STACK</p><h3 id="drawerTitle">Lo que hacemos</h3><ul id="drawerList"></ul><p class="drawer-note">Cada proyecto parte de una sesión de descubrimiento para definir el mejor camino.</p></aside>
@@ -70,6 +80,7 @@
     </section>
   </main>
   <div class="contact-modal" id="contactModal" aria-hidden="true"><div><button id="closeModal">×</button><p class="eyebrow">CONVERSEMOS</p><h2>¿Qué quieres<br><em>construir?</em></h2><a href="https://wa.me/5215555555555" target="_blank" rel="noopener">ESCRIBIR POR WHATSAPP ↗</a><a href="mailto:hola@nexo.mx">HOLA@NEXO.MX</a></div></div>
+  <div class="page-transition" id="pageTransition" aria-hidden="true"><span>MACROSAP</span></div>
   <a class="whatsapp" href="https://wa.me/5215555555555" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><span>◔</span><i>WHATSAPP</i></a>
   <script src="script.js"></script>
 </body>
