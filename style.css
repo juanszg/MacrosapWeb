@@ -21,6 +21,14 @@ body {
     font-family: var(--sans);
     overflow: hidden
 }
+.wasap{
+    width: 35px;
+    height: 35px;
+    background-image: url(/img/whatsico.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 0px;
+}
 
 .blueprint {
     position: fixed;
@@ -753,24 +761,28 @@ background:var(--lime);
 .whatsapp {
     position: fixed;
     z-index: 12;
-    right: 27px;
-    bottom: 24px;
+    right: 50px;
+    bottom: 30px;
     background: #25d366;
+    /* background: none; */
     color: #062d1b;
     text-decoration: none;
-    height: 52px;
-    padding: 0 15px;
+    height: 50px;
+    width: 50px;
+    /* padding: 0 15px; */
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 8px;
-    border-radius: 28px;
-    box-shadow: 4px 5px 0 var(--ink);
+    /* gap: 8px; */
+    border-radius: 99rem;
+     box-shadow: 3px 3px 0 var(--ink); 
+
     font: 600 10px var(--mono)
 }
 
 .whatsapp span {
     font-size: 27px;
-    transform: rotate(-30deg)
+    /* transform: rotate(-30deg) */
 }
 
 @media(max-width:760px) {
