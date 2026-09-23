@@ -21,13 +21,25 @@ body {
     font-family: var(--sans);
     overflow: hidden
 }
-.wasap{
+
+.wasap {
     width: 35px;
     height: 35px;
     background-image: url(/img/whatsico.png);
     background-repeat: no-repeat;
     background-size: contain;
     padding: 0px;
+}
+.resalte{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    font-size: 800;
+    color: rgb(3, 0, 19);
+    background-color: #73fc88;
+    width: 300px;
+
 }
 
 .blueprint {
@@ -88,8 +100,9 @@ small,
     font: 500 10px/1.2 var(--mono);
     letter-spacing: .08em
 }
-.eyebrowAbout{
-    display:flex;
+
+.eyebrowAbout {
+    display: flex;
     justify-content: center;
     align-items: center;
     margin: 2rem;
@@ -189,7 +202,8 @@ small,
     color: var(--ink);
     font-family: var(--sans);
     cursor: pointer;
-    transition: transform .28s ease, box-shadow .28s ease
+    transition: transform .28s ease, box-shadow .28s ease;
+    border: 2px solid rgb(4, 0, 28);
 }
 
 .tile:hover {
@@ -236,8 +250,9 @@ small,
 
 .tile-web {
     grid-area: web;
-    /* background: var(--lime) */
-    background-color: #ffc558;
+     background: rgb(152, 246, 152);
+    /* background-color: #ffc558; */
+
 }
 
 .tile-data {
@@ -466,7 +481,7 @@ small,
     left: 5vw;
     border-radius: 1rem;
     /* background: rgb(255, 230, 0); */
-background:var(--lime);
+    background: var(--lime);
     color: var(--ink);
     font: 600 14px var(--mono);
     letter-spacing: .08em;
@@ -518,15 +533,239 @@ background:var(--lime);
 }
 
 /* Collage temático de cada servicio */
-.detail-visual{background:#0c2941;perspective:900px}
-.collage-orbit{position:absolute;width:130%;height:130%;left:-15%;top:-15%;border:1px solid #d8ff5560;border-radius:50%;transform:rotate(-25deg)}
-.collage-orbit:before,.collage-orbit:after{content:"";position:absolute;border:1px solid #ffffff45;border-radius:50%;inset:12%}.collage-orbit:after{inset:27%}
-.collage-card{position:absolute;margin:0;overflow:hidden;border:2px solid #e7f7fa;box-shadow:10px 12px 0 #061c2b55;transform-origin:center;animation:collageFloat 7s ease-in-out infinite}.collage-card img{display:block;width:100%;height:100%;object-fit:cover;filter:saturate(.82) contrast(1.08);transition:transform .7s cubic-bezier(.16,1,.3,1),filter .5s}.detail-visual:hover .collage-card img{transform:scale(1.08);filter:saturate(1.1) contrast(1.04)}.collage-main{z-index:2;width:57%;height:70%;left:18%;top:14%;transform:rotate(-5deg)}.collage-top{z-index:3;width:38%;height:32%;right:3%;top:8%;transform:rotate(8deg);animation-delay:-2.2s}.collage-bottom{z-index:3;width:35%;height:31%;left:3%;bottom:7%;transform:rotate(7deg);animation-delay:-4.3s}.collage-chip{position:absolute;z-index:5;right:15px;bottom:18px;padding:8px 10px;background:var(--lime);color:var(--ink);font:500 9px var(--mono);letter-spacing:.08em}.collage-count{position:absolute;z-index:4;top:16px;left:16px;font:800 34px/.8 "Exo 2";color:#fff;text-shadow:3px 3px 0 var(--electric)}
-@keyframes collageFloat{0%,100%{translate:0 0}50%{translate:0 -11px}}
+.detail-visual {
+    background: #0c2941;
+    perspective: 900px
+}
+
+.collage-orbit {
+    position: absolute;
+    width: 130%;
+    height: 130%;
+    left: -15%;
+    top: -15%;
+    border: 1px solid #d8ff5560;
+    border-radius: 50%;
+    /* transform: rotate(-25deg) */
+}
+
+.collage-orbit:before,
+.collage-orbit:after {
+    content: "";
+    position: absolute;
+    border: 1px solid #ffffff45;
+    border-radius: 50%;
+    inset: 12%
+}
+
+.collage-orbit:after {
+    inset: 27%
+}
+
+.collage-card {
+    position: absolute;
+    margin: 0;
+    overflow: hidden;
+    border: 2px solid #e7f7fa;
+    box-shadow: 10px 12px 0 #061c2b55;
+    transform-origin: center;
+    animation: collageFloat 7s ease-in-out infinite
+}
+
+.collage-card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(.82) contrast(1.08);
+    transition: transform .7s cubic-bezier(.16, 1, .3, 1), filter .5s
+}
+
+.detail-visual:hover .collage-card img {
+    transform: scale(1.08);
+    filter: saturate(1.1) contrast(1.04)
+}
+
+.collage-main {
+    z-index: 2;
+    width: 57%;
+    height: 70%;
+    left: 18%;
+    top: 14%;
+    /* transform: rotate(-5deg) */
+}
+
+.collage-top {
+    z-index: 3;
+    width: 38%;
+    height: 32%;
+    right: 3%;
+    top: 8%;
+    /* transform: rotate(8deg); */
+    animation-delay: -2.2s
+}
+
+.collage-bottom {
+    z-index: 3;
+    width: 35%;
+    height: 31%;
+    left: 3%;
+    bottom: 7%;
+    /* transform: rotate(7deg); */
+    animation-delay: -4.3s
+}
+
+.collage-chip {
+    position: absolute;
+    z-index: 5;
+    right: 15px;
+    bottom: 18px;
+    padding: 8px 10px;
+    background: var(--lime);
+    color: var(--ink);
+    font: 500 9px var(--mono);
+    letter-spacing: .08em
+}
+
+.collage-count {
+    position: absolute;
+    z-index: 4;
+    top: 16px;
+    left: 16px;
+    font: 800 34px/.8 "Exo 2";
+    color: #fff;
+    text-shadow: 3px 3px 0 var(--electric)
+}
+
+@keyframes collageFloat {
+
+    0%,
+    100% {
+        translate: 0 0
+    }
+
+    50% {
+        translate: 0 -11px
+    }
+}
 
 /* Cambio de pantalla: barrido editorial y entrada escalonada */
-.page-transition{position:fixed;z-index:50;inset:0;background:var(--ink);transform:translateY(101%);pointer-events:none;display:grid;place-items:center;color:var(--lime);font:800 clamp(42px,9vw,130px)/1 "Exo 2";letter-spacing:-.08em}.page-transition:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 29px,#d8ff5526 30px 31px)}.page-transition span{position:relative;opacity:0;transform:translateY(20px)}.page-transition.run{animation:pageWipe .82s cubic-bezier(.76,0,.24,1) both}.page-transition.run span{animation:brandFlash .42s .21s ease both}.screen.active{animation:screenIn .65s .1s cubic-bezier(.16,1,.3,1) both}.detail-screen.active .detail-heading,.detail-screen.active .detail-visual,.detail-screen.active .detail-footer{animation:riseIn .65s cubic-bezier(.16,1,.3,1) both}.detail-screen.active .detail-visual{animation-delay:.1s}.detail-screen.active .detail-footer{animation-delay:.19s}.tile{transition:transform .38s cubic-bezier(.16,1,.3,1),box-shadow .38s cubic-bezier(.16,1,.3,1),filter .38s ease}.tile.is-selected{transform:scale(.94) rotate(-1deg);filter:brightness(1.15);box-shadow:0 0 0 6px var(--lime)}
-@keyframes pageWipe{0%{transform:translateY(101%)}35%,65%{transform:translateY(0)}100%{transform:translateY(-101%)}}@keyframes brandFlash{0%,100%{opacity:0;transform:translateY(20px)}35%,65%{opacity:1;transform:translateY(0)}}@keyframes screenIn{from{opacity:.1;filter:blur(8px)}to{opacity:1;filter:blur(0)}}@keyframes riseIn{from{opacity:0;transform:translateY(28px) scale(.97)}to{opacity:1;transform:none}}
+.page-transition {
+    position: fixed;
+    z-index: 50;
+    inset: 0;
+    background: var(--ink);
+    transform: translateY(101%);
+    pointer-events: none;
+    display: grid;
+    place-items: center;
+    color: var(--lime);
+    font: 800 clamp(42px, 9vw, 130px)/1 "Exo 2";
+    letter-spacing: -.08em
+}
+
+.page-transition:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(90deg, transparent 0 29px, #d8ff5526 30px 31px)
+}
+
+.page-transition span {
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px)
+}
+
+.page-transition.run {
+    animation: pageWipe .82s cubic-bezier(.76, 0, .24, 1) both
+}
+
+.page-transition.run span {
+    animation: brandFlash .42s .21s ease both
+}
+
+.screen.active {
+    animation: screenIn .65s .1s cubic-bezier(.16, 1, .3, 1) both
+}
+
+.detail-screen.active .detail-heading,
+.detail-screen.active .detail-visual,
+.detail-screen.active .detail-footer {
+    animation: riseIn .65s cubic-bezier(.16, 1, .3, 1) both
+}
+
+.detail-screen.active .detail-visual {
+    animation-delay: .1s
+}
+
+.detail-screen.active .detail-footer {
+    animation-delay: .19s
+}
+
+.tile {
+    transition: transform .38s cubic-bezier(.16, 1, .3, 1), box-shadow .38s cubic-bezier(.16, 1, .3, 1), filter .38s ease
+}
+
+.tile.is-selected {
+    transform: scale(.94) rotate(-1deg);
+    filter: brightness(1.15);
+    box-shadow: 0 0 0 6px var(--lime)
+}
+
+@keyframes pageWipe {
+    0% {
+        transform: translateY(101%)
+    }
+
+    35%,
+    65% {
+        transform: translateY(0)
+    }
+
+    100% {
+        transform: translateY(-101%)
+    }
+}
+
+@keyframes brandFlash {
+
+    0%,
+    100% {
+        opacity: 0;
+        transform: translateY(20px)
+    }
+
+    35%,
+    65% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+@keyframes screenIn {
+    from {
+        opacity: .1;
+        filter: blur(8px)
+    }
+
+    to {
+        opacity: 1;
+        filter: blur(0)
+    }
+}
+
+@keyframes riseIn {
+    from {
+        opacity: 0;
+        transform: translateY(28px) scale(.97)
+    }
+
+    to {
+        opacity: 1;
+        transform: none
+    }
+}
 
 .visual-grid {
     position: absolute;
@@ -645,6 +884,7 @@ background:var(--lime);
 
 .about-layout {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
@@ -775,7 +1015,7 @@ background:var(--lime);
     align-items: center;
     /* gap: 8px; */
     border-radius: 99rem;
-     box-shadow: 3px 3px 0 var(--ink); 
+    box-shadow: 3px 3px 0 var(--ink);
 
     font: 600 10px var(--mono)
 }
@@ -897,7 +1137,22 @@ background:var(--lime);
         min-height: 0
     }
 
-    .collage-main{width:60%;height:68%;left:20%;top:15%}.collage-top{width:39%;height:31%}.collage-bottom{width:37%;height:30%}
+    .collage-main {
+        width: 60%;
+        height: 68%;
+        left: 20%;
+        top: 15%
+    }
+
+    .collage-top {
+        width: 39%;
+        height: 31%
+    }
+
+    .collage-bottom {
+        width: 37%;
+        height: 30%
+    }
 
     .detail-footer {
         display: block
@@ -941,4 +1196,17 @@ background:var(--lime);
     }
 }
 
-@media (prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.page-transition{display:none}}
+@media (prefers-reduced-motion:reduce) {
+
+    *,
+    *:before,
+    *:after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important
+    }
+
+    .page-transition {
+        display: none
+    }
+}
