@@ -5,28 +5,90 @@ const services = {
     { title: 'Aplicaciones web a medida', detail: 'Digitalizamos procesos con herramientas creadas para tu operación: cotizadores, portales privados, paneles administrativos y más.', tags: ['A tu operación', 'Escalables'], image: 1 },
     { title: 'UX / UI y prototipado', detail: 'Definimos los flujos y la apariencia antes de programar para que el producto sea intuitivo para tus clientes y tu equipo.', tags: ['Experiencia clara', 'Prototipo visual'], image: 2 },
     { title: 'APIs y automatización', detail: 'Conectamos plataformas y automatizamos tareas repetitivas para reducir capturas manuales y mantener la información sincronizada.', tags: ['Integraciones', 'Menos tareas manuales'], image: 0 }
-  ], images: ['https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1000&q=85', 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=700&q=85', 'https://images.unsplash.com/photo-1555099962-4199c345e5dd?auto=format&fit=crop&w=700&q=85'], alts: ['Código de una aplicación web', 'Diseñador desarrollando una web', 'Pantalla con código'] },
+  ], images: [], alts: [] },
   data: { kicker: '02 — ARQUITECTURA', title: 'Bases de datos', lead: 'Transformamos información en un sistema ordenado y estructurado, para que tengas el control de todo en tu empresa.', number: '02', label: 'DATA ARCHITECTURE', foot: 'Organizamos, protegemos y conectamos el activo más valioso de tu empresa: sus datos.', drawer: 'Servicios de bases de datos', list: [
     { title: 'Modelado y normalización', detail: 'Diseñamos una estructura consistente para evitar duplicados, relacionar registros y hacer que la información sea confiable.', tags: ['Datos ordenados', 'Estructura clara'], image: 0 },
     { title: 'Migración de información', detail: 'Movemos tus datos desde hojas de cálculo o sistemas anteriores con un plan para validar su integridad durante el cambio.', tags: ['Migración segura', 'Validación'], image: 1 },
     { title: 'Dashboards y reportes', detail: 'Convertimos datos operativos en indicadores visuales para identificar tendencias y tomar decisiones con mayor claridad.', tags: ['Indicadores clave', 'Decisiones ágiles'], image: 2 },
     { title: 'Backups y seguridad', detail: 'Definimos respaldos y permisos de acceso adecuados para reducir riesgos y proteger la continuidad de tu operación.', tags: ['Respaldo', 'Accesos controlados'], image: 0 }
-  ], images: ['https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=85', 'https://images.unsplash.com/photo-1543286386-713bdd548da4?auto=format&fit=crop&w=700&q=85', 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=700&q=85'], alts: ['Tablero de datos', 'Visualización de métricas', 'Analítica de negocio'] },
+  ], images: [], alts: [] },
   access: { kicker: '03 — SEGURIDAD FÍSICA', title: 'Control de acceso', lead: 'Integramos personas, espacios y reglas en una operación segura y visible.', number: '03', label: 'ACCESS CONTROL', foot: 'Controla entradas, horarios y permisos con una solución conectada a tu negocio.', drawer: 'Servicios de control de acceso', list: [
     { title: 'Biométricos y lectores', detail: 'Administra entradas con credenciales o dispositivos biométricos, asignando permisos según perfiles y horarios.', tags: ['Acceso controlado', 'Permisos por perfil'], image: 0 },
     { title: 'Control de visitantes', detail: 'Lleva un registro claro de visitas, autorizaciones y horarios para cuidar tus instalaciones y saber quién está dentro.', tags: ['Registro digital', 'Trazabilidad'], image: 1 },
     { title: 'Reportes en tiempo real', detail: 'Consulta eventos e incidencias desde una vista central para responder con rapidez y tener mejor visibilidad de tus espacios.', tags: ['Visibilidad', 'Alertas útiles'], image: 2 },
     { title: 'Integración con nómina', detail: 'Conecta registros de asistencia con tus procesos administrativos para reducir capturas repetidas y simplificar los cierres.', tags: ['Menos captura', 'Flujos conectados'], image: 0 }
-  ], images: ['https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1000&q=85', 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=700&q=85', 'https://images.unsplash.com/photo-1633265486064-086b219458ec?auto=format&fit=crop&w=700&q=85'], alts: ['Acceso seguro a un edificio', 'Tecnología de seguridad', 'Cerradura inteligente'] },
+  ], images: [], alts: [] },
   pos: { kicker: '04 — COMERCIO CONECTADO', title: 'Punto de venta', lead: 'Una caja ágil y una operación ordenada, desde el inventario hasta el último ticket.', number: '04', label: 'POS ECOSYSTEM', foot: 'Centraliza ventas, clientes e inventario para que tu equipo pueda enfocarse en atender.', drawer: 'Servicios de punto de venta', list: [
     { title: 'Ventas e inventario', detail: 'Registra ventas y actualiza existencias en un mismo flujo para saber qué se vende, qué queda y qué debes reponer.', tags: ['Existencias claras', 'Operación ágil'], image: 0 },
     { title: 'Facturación y cortes', detail: 'Organiza cierres de caja y consulta los movimientos del día con reportes que ayudan a cuadrar la operación.', tags: ['Cierres simples', 'Reportes'], image: 1 },
     { title: 'Multi-sucursal', detail: 'Centraliza productos y consulta resultados de distintas ubicaciones para mantener una operación consistente al crecer.', tags: ['Varias ubicaciones', 'Vista central'], image: 2 },
     { title: 'CRM y lealtad', detail: 'Conoce mejor a tus clientes, conserva su historial y crea beneficios para impulsar que vuelvan a comprar.', tags: ['Historial de clientes', 'Fidelización'], image: 0 }
-  ], images: ['https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1000&q=85', 'https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=700&q=85', 'https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?auto=format&fit=crop&w=700&q=85'], alts: ['Pago con terminal', 'Compra con tarjeta', 'Tienda moderna'] }
+  ], images: [], alts: [] }
 };
+const serviceImageFiles = {
+  web: ['web-commerce.svg', 'web-app.svg', 'web-ux.svg', 'web-api.svg'],
+  data: ['data-model.svg', 'data-migration.svg', 'data-dashboard.svg', 'data-backup.svg'],
+  access: ['access-biometric.svg', 'access-visitor.svg', 'access-realtime.svg', 'access-team.svg'],
+  pos: ['pos-terminal.svg', 'pos-receipt.svg', 'pos-branches.svg', 'pos-crm.svg']
+};
+Object.entries(serviceImageFiles).forEach(([key, files]) => {
+  const service = services[key];
+  service.images = files.map(file => `img/services/${file}`);
+  service.alts = service.list.map(item => `Ilustración original: ${item.title}`);
+  service.list.forEach((item, index) => { item.image = index; });
+});
 let currentScreen = $('#inicio'), isChanging = false;
-function show(id) { if (isChanging || currentScreen.id === id) return; isChanging = true; const next = $('#' + id), wipe = $('#pageTransition'); wipe.classList.add('run'); setTimeout(() => { currentScreen.classList.remove('active'); next.classList.add('active'); currentScreen = next; next.scrollTop = 0; window.scrollTo(0, 0) }, 260); setTimeout(() => { wipe.classList.remove('run'); isChanging = false }, 820) }
+let screenHistory = ['inicio'];
+if (history.state?.macrosapScreen !== 'inicio') history.replaceState({ macrosapScreen: 'inicio' }, '', location.href);
+function show(id, { fromHistory = false } = {}) {
+  if (isChanging || currentScreen.id === id) return;
+  if (fromHistory) {
+    if (screenHistory.at(-2) === id) screenHistory.pop();
+    else if (screenHistory.at(-1) !== id) screenHistory.push(id);
+  } else {
+    if (screenHistory.at(-1) !== id) screenHistory.push(id);
+    if (history.state?.macrosapScreen !== id) history.pushState({ macrosapScreen: id }, '', location.href);
+  }
+  isChanging = true;
+  const next = $('#' + id), wipe = $('#pageTransition');
+  wipe.classList.add('run');
+  setTimeout(() => {
+    currentScreen.classList.remove('active');
+    next.classList.add('active');
+    currentScreen = next;
+    next.scrollTop = 0;
+    window.scrollTo(0, 0);
+  }, 260);
+  setTimeout(() => { wipe.classList.remove('run'); isChanging = false }, 820);
+}
+window.addEventListener('popstate', event => {
+  const target = event.state?.macrosapScreen || 'inicio';
+  if (currentScreen.id !== target) show(target, { fromHistory: true });
+});
+function backToPreviousScreen() {
+  if (screenHistory.length > 1) history.back();
+  else show('inicio');
+}
+let edgeSwipeStart = null;
+window.addEventListener('touchstart', event => {
+  const target = event.target;
+  if (event.touches.length !== 1 || event.touches[0].clientX > 26 || isChanging ||
+      siteMenu?.classList.contains('open') || serviceModal?.classList.contains('open') ||
+      $('#contactModal')?.classList.contains('open') || target.closest('input, textarea, select, [contenteditable="true"]')) {
+    edgeSwipeStart = null;
+    return;
+  }
+  edgeSwipeStart = { x: event.touches[0].clientX, y: event.touches[0].clientY, time: Date.now() };
+}, { passive: true });
+window.addEventListener('touchend', event => {
+  if (!edgeSwipeStart || !event.changedTouches.length) return;
+  const touch = event.changedTouches[0];
+  const deltaX = touch.clientX - edgeSwipeStart.x;
+  const deltaY = Math.abs(touch.clientY - edgeSwipeStart.y);
+  const quickEnough = Date.now() - edgeSwipeStart.time < 800;
+  edgeSwipeStart = null;
+  if (deltaX > 100 && deltaY < 75 && quickEnough && screenHistory.length > 1) history.back();
+}, { passive: true });
 function populateCollage(d) { const imageIds = ['collageMain', 'collageTop', 'collageBottom']; imageIds.forEach((id, index) => { $('#' + id).src = d.images[index]; $('#' + id).alt = d.alts[index] }) }
 const serviceModal = $('#serviceModal');
 let currentService = null;
@@ -171,6 +233,7 @@ document.addEventListener('keydown', event => {
   else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
 });
 document.querySelectorAll('.service-trigger').forEach(btn => btn.addEventListener('click', () => { const d = services[btn.dataset.service]; currentService = d; btn.classList.add('is-selected'); setTimeout(() => btn.classList.remove('is-selected'), 650); $('#detailKicker').textContent = d.kicker; $('#detailTitle').textContent = d.title; $('#detailLead').textContent = d.lead; $('#detailNumber').textContent = d.number; $('#detailLabel').textContent = d.label; $('#detailFoot').textContent = d.foot; populateCollage(d); show('detail') }));
+$('#brandHome').addEventListener('click', event => { event.preventDefault(); show('inicio'); });
 document.querySelectorAll('.back-home').forEach(b => b.addEventListener('click', () => show('inicio'))); $('#backButton').addEventListener('click', () => show('inicio')); $('#aboutButton').addEventListener('click', () => show('about')); $('#faqButton').addEventListener('click', () => show('faq'));
 $('#moreButton').addEventListener('click', () => openServiceModal(currentService));
 $('#closeServiceModal').addEventListener('click', () => closeServiceModal());
