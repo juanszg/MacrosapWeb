@@ -19,8 +19,37 @@
     <a class="brand" href="#inicio" aria-label="Nexo inicio"><span class="brand-mark">M</span><span>MACROSAP<span
           class="slash">//</span></span></a>
     <div class="top-meta"><span class="live-dot"></span> SOLUCIONES DIGITALES · MX</div>
-    <button class="menu-button" id="menuButton" aria-label="Abrir menú"><i></i><i></i></button>
+    <button class="menu-button" id="menuButton" aria-label="Abrir menú" aria-expanded="false" aria-controls="siteMenu"><i></i><i></i><i></i></button>
   </header>
+
+  <div class="site-menu" id="siteMenu" aria-hidden="true">
+    <button class="site-menu-backdrop" id="menuBackdrop" type="button" tabindex="-1" aria-label="Cerrar menú"></button>
+    <aside class="site-menu-panel" role="dialog" aria-modal="true" aria-labelledby="menuHeading">
+      <div class="site-menu-head">
+        <span class="brand"><span class="brand-mark">M</span><span>MACROSAP<span class="slash">//</span></span></span>
+        <button class="site-menu-close" id="closeMenu" type="button" aria-label="Cerrar menú">×</button>
+      </div>
+      <p class="site-menu-kicker" id="menuHeading">[ NAVEGACIÓN ]</p>
+      <nav class="site-menu-nav" aria-label="Secciones del sitio">
+        <button type="button" data-menu-screen="inicio"><span>Inicio</span><b>01</b></button>
+        <p class="site-menu-kicker">SERVICIOS</p>
+        <button type="button" data-menu-service="web"><span>Desarrollo web</span><b>↗</b></button>
+        <button type="button" data-menu-service="data"><span>Bases de datos</span><b>↗</b></button>
+        <button type="button" data-menu-service="access"><span>Control de acceso</span><b>↗</b></button>
+        <button type="button" data-menu-service="pos"><span>Punto de venta</span><b>↗</b></button>
+        <p class="site-menu-kicker">MACROSAP</p>
+        <button type="button" data-menu-screen="about"><span>Acerca de nosotros</span><b>05</b></button>
+        <button type="button" data-menu-screen="faq"><span>Preguntas frecuentes</span><b>06</b></button>
+      </nav>
+      <div class="site-menu-contact">
+        <p class="site-menu-kicker">HABLEMOS</p>
+        <a href="https://wa.me/525551064052" target="_blank" rel="noopener">WhatsApp <b>↗</b><small>+52 55 5106 4052</small></a>
+        <a href="tel:+525551064052">Llamar <b>↗</b><small>+52 55 5106 4052</small></a>
+        <a href="mailto:macrosap@online.mx">Correo electrónico <b>↗</b><small>macrosap@online.mx</small></a>
+        <button class="site-menu-quote" id="menuQuote" type="button">COTIZA TU PROYECTO <b>→</b></button>
+      </div>
+    </aside>
+  </div>
 
   <main id="app">
     <section class="screen home-screen active" id="inicio" aria-label="Inicio">
@@ -30,12 +59,14 @@
 
       <div class="bento-grid">
         <button class="tile tile-web service-trigger" data-service="web"><span class="tile-index">01</span>
+          <span class="tile-icon icon-web" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="m17 14-10 10 10 10M31 14l10 10-10 10M28 9l-8 30"/></svg></span>
           <div><small>PRODUCTO DIGITAL</small>
             <h2>Desarrollo<br>web</h2>
             <p>Experiencias que convierten.</p>
           </div>
         </button>
         <button class="tile tile-data service-trigger" data-service="data"><span class="tile-index">02</span>
+          <span class="tile-icon icon-data" aria-hidden="true"><svg viewBox="0 0 48 48"><ellipse cx="24" cy="11" rx="15" ry="6"/><path d="M9 11v26c0 3 7 6 15 6s15-3 15-6V11M9 20c0 3 7 6 15 6s15-3 15-6M9 29c0 3 7 6 15 6s15-3 15-6"/></svg></span>
           <div><small>ARQUITECTURA</small>
             <h2>Bases de<br>datos</h2>
             <p>Datos listos para decidir.</p>
@@ -44,6 +75,7 @@
         <!-- <span class="code">&lt;/&gt;</span> -->
         <!-- <span class="data-lines">▥</span> -->
         <button class="tile tile-access service-trigger" data-service="access"><span class="tile-index">03</span>
+          <span class="tile-icon icon-access" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 5 39 11v11c0 10-6 17-15 21C15 39 9 32 9 22V11l15-6Z"/><rect x="17" y="21" width="14" height="12" rx="2"/><path d="M20 21v-4a4 4 0 0 1 8 0v4"/></svg></span>
           <div><small>SEGURIDAD FÍSICA</small>
             <h2>Control de<br>acceso</h2>
             <p>Tu operación, conectada.</p>
@@ -51,10 +83,11 @@
         </button>
         <!-- <span class="scan-line"></span> -->
         <article class="tile tile-hero">
+          <span class="tile-icon icon-hero" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M8 24h10l6-10 7 20 5-10h4"/><circle cx="8" cy="24" r="3"/><circle cx="40" cy="24" r="3"/></svg></span>
           <div class="hero-copy">
             <p class="eyebrow">MACROSAP</p>
             <h2>Construimos sistemas<br>que<br>impulsan tu negocio.</h2><button class="outline-button"
-              id="heroContact">HABLEMOS <b>→</b></button>
+              id="heroContact">COTIZA TU PROYECTO <b>→</b></button>
           </div>
           <div class="image-slider" aria-label="Proyectos destacados">
             <img class="slide active"
@@ -74,13 +107,15 @@
         <!-- <span class="tile-arrow">↗</span> -->
         <button class="tile tile-pos service-trigger" data-service="pos">
           <span class="tile-index">04</span>
+          <span class="tile-icon icon-pos" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M13 7h22v34H13zM18 13h12M18 19h12M18 26h3M24 26h3M30 26h2M18 32h3M24 32h3M30 32h2"/><path d="M17 4h14"/></svg></span>
           <div><small>COMERCIO CONECTADO</small>
             <h2>Punto de<br>venta</h2>
             <p>Vende más. Opera simple.</p>
-          </div><span class="receipt">$<br>▤</span>
+          </div>
         </button>
         <button class="tile tile-about" id="aboutButton"><span class="tile-index">05</span><small>ACERCA DE
             MACROSAP</small>
+          <span class="tile-icon icon-about" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M17 29c-3-2-5-6-5-10a12 12 0 1 1 24 0c0 4-2 8-5 10-2 2-3 4-3 6h-8c0-2-1-4-3-6ZM20 41h8M20 36h8M24 12v8M18 16h12"/></svg></span>
           <h2>Ingeniería<br>que resuelve</h2>
           <div class="stat">
             <!-- <strong>12</strong>
@@ -88,6 +123,7 @@
           </div>
         </button>
         <button class="tile tile-faq" id="faqButton"><span class="tile-index">06</span><small>¿TIENES DUDAS?</small>
+          <span class="tile-icon icon-faq" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M8 10h32v23H24l-10 8v-8H8z"/><path d="M20 19a4 4 0 1 1 7 3c-2 2-3 2-3 5M24 31v.2"/></svg></span>
           <h2>FAQ<span class="blink">_</span></h2>
           <p>Respuestas claras.</p>
         </button>
@@ -116,27 +152,76 @@
           <button class="contact-link" id="detailContact">INICIAR UN PROYECTO <b>↗</b></button>
         </div>
       </div>
-      <aside class="info-drawer" id="infoDrawer" aria-hidden="true"><button id="closeDrawer"
-          aria-label="Cerrar">×</button>
-        <p class="eyebrow">CAPACIDADES / STACK</p>
-        <h3 id="drawerTitle">Lo que hacemos</h3>
-        <ul id="drawerList"></ul>
-        <p class="drawer-note">Cada proyecto parte de una sesión de descubrimiento para definir el mejor camino.</p>
-      </aside>
     </section>
 
-    <section class="screen detail-screen" id="about">
-      <p class="eyebrowAbout">05 — ACERCA DE MACROSAP</p>
+    <section class="screen detail-screen about-screen" id="about" aria-label="Acerca de MACROSAP">
       <button class="back-button back-home">← &nbsp;VOLVER AL MENU</button>
-      <div class="about-layout">
-        <h2>La tecnología<br>debe sentirse<br><em>natural.</em></h2>
-        <div>
-          <p>Somos un equipo multidisciplinario que convierte problemas operativos en productos digitales</p><br>
-            <p class="resalte">sencillos,
-            robustos y escalables.</p>
-          <p>Trabajamos hombro a hombro con cada negocio, desde la primera idea hasta el despliegue.</p><button
-            class="solid-button about-contact">CONOCE AL EQUIPO <span>↗</span></button>
-        </div>
+      <div class="about-page">
+        <header class="about-hero">
+          <div class="about-hero-copy">
+            <p class="eyebrow">05 — ACERCA DE MACROSAP</p>
+            <h1>Ingeniería<br>que <em>resuelve.</em></h1>
+            <p class="about-lead">Tecnología pensada alrededor de las personas, los procesos y el siguiente paso de tu empresa.</p>
+            <p class="about-supporting">Convertimos retos cotidianos en herramientas claras: desde una página web hasta sistemas que conectan toda tu operación.</p>
+            <button class="solid-button about-contact">HABLEMOS DE TU PROYECTO <span>↗</span></button>
+            <div class="about-capability-tags"><span>ESTRATEGIA</span><span>INGENIERÍA</span><span>IMPLEMENTACIÓN</span></div>
+          </div>
+          <div class="about-hero-collage" aria-label="Equipo colaborando en un proyecto digital">
+            <figure class="about-hero-photo about-hero-photo-main"><img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85" alt="Equipo conversando y planeando un proyecto" loading="lazy" decoding="async"></figure>
+            <figure class="about-hero-photo about-hero-photo-small"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=700&q=85" alt="Ingeniería de software en una estación de trabajo" loading="lazy" decoding="async"></figure>
+            <div class="about-photo-label"><span>IDEAS QUE SE CONVIERTEN</span><b>EN SOLUCIONES ↗</b></div>
+            <span class="about-orbit about-orbit-one"></span><span class="about-orbit about-orbit-two"></span>
+          </div>
+        </header>
+
+        <section class="about-process" aria-label="Nuestro enfoque">
+          <div class="about-process-intro"><p class="eyebrow">DEL RETO AL CRECIMIENTO</p><p>La tecnología vale cuando hace más sencillo el trabajo de todos los días.</p></div>
+          <div class="about-process-step"><b>01</b><span>Entender</span><small>Escuchamos el reto</small></div>
+          <div class="about-process-step"><b>02</b><span>Diseñar</span><small>Definimos el alcance</small></div>
+          <div class="about-process-step"><b>03</b><span>Construir</span><small>Integramos soluciones</small></div>
+          <div class="about-process-step"><b>04</b><span>Evolucionar</span><small>Preparamos el siguiente paso</small></div>
+        </section>
+
+        <section class="about-capabilities" aria-labelledby="aboutCapabilitiesTitle">
+          <div class="about-section-heading">
+            <p class="eyebrow">CAPACIDADES / 01—05</p>
+            <h2 id="aboutCapabilitiesTitle">Todo conectado.<br><em>Todo más claro.</em></h2>
+            <p>La solución adecuada puede abrir nuevos caminos para vender, decidir y crecer. Estas son algunas formas de empezar.</p>
+          </div>
+          <div class="about-mosaic">
+            <article class="about-card about-card-web">
+              <div class="about-card-image"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1000&q=85" alt="Desarrollo de una plataforma web en computadora" loading="lazy" decoding="async"><span>01 / PRODUCTO DIGITAL</span></div>
+              <div class="about-card-copy"><h3>Desarrollo web</h3><p>Tu sitio, tienda o aplicación puede convertirse en un canal útil para atraer clientes, atenderlos y simplificar operaciones.</p><small>SITIOS · E-COMMERCE · APLICACIONES</small></div>
+            </article>
+            <article class="about-card about-card-data">
+              <div class="about-card-image"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=85" alt="Tablero con datos y gráficas para tomar decisiones" loading="lazy" decoding="async"><span>02 / DATOS</span></div>
+              <div class="about-card-copy"><h3>Bases de datos</h3><p>Ordenamos y conectamos tu información para encontrar patrones, reducir duplicidades y tomar decisiones con más contexto.</p><small>MODELADO · MIGRACIÓN · REPORTES</small></div>
+            </article>
+            <article class="about-card about-card-digital">
+              <div class="about-card-image"><img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1000&q=85" alt="Equipo colaborando con herramientas digitales" loading="lazy" decoding="async"><span>03 / DIGITALIZACIÓN</span></div>
+              <div class="about-card-copy"><h3>Menos pasos manuales</h3><p>Digitalizar procesos ayuda a disminuir errores, dar seguimiento claro y liberar tiempo para que tu equipo se enfoque en lo importante.</p><small>FLUJOS · AUTOMATIZACIÓN · INTEGRACIÓN</small></div>
+            </article>
+            <article class="about-card about-card-pos">
+              <div class="about-card-image"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1000&q=85" alt="Cliente pagando en un punto de venta" loading="lazy" decoding="async"><span>04 / COMERCIO</span></div>
+              <div class="about-card-copy"><h3>Puntos de venta</h3><p>Ventas, inventario, cortes y sucursales conectados dan una visión más completa del negocio y una atención más ágil.</p><small>VENTAS · INVENTARIO · MULTI-SUCURSAL</small></div>
+            </article>
+            <article class="about-card about-card-access">
+              <div class="about-card-image"><img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=900&q=85" alt="Sistema de acceso electrónico en una entrada" loading="lazy" decoding="async"><span>05 / SEGURIDAD FÍSICA</span></div>
+              <div class="about-card-copy"><h3>Control de acceso</h3><p>Permisos, horarios y entradas en un sistema conectado ayudan a cuidar tus espacios y mantener visibilidad de la operación.</p><small>LECTORES · VISITANTES · REPORTES</small></div>
+            </article>
+            <article class="about-card about-card-team">
+              <div class="about-card-image"><img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=85" alt="Equipo de trabajo compartiendo ideas alrededor de una mesa" loading="lazy" decoding="async"><span>EQUIPO / INGENIERÍA</span></div>
+              <div class="about-card-copy"><h3>Personas que entienden el reto</h3><p>Ingeniería, diseño e implementación trabajan mejor cuando parten de la misma pregunta: ¿qué necesita tu equipo para hacer mejor su trabajo?</p><small>ESCUCHAR · RESOLVER · ACOMPAÑAR</small></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="about-potential">
+          <div><p class="eyebrow">LO QUE SIGUE / TU EMPRESA</p><h2>Tu siguiente gran paso<br>puede empezar <em>hoy.</em></h2><p>Cuéntanos qué quieres mejorar. Podemos ayudarte a definir un alcance realista y una ruta para llevarlo a cabo.</p></div>
+          <button class="about-contact about-potential-button" type="button">COTIZA TU PROYECTO <b>↗</b></button>
+          <div class="about-potential-mark" aria-hidden="true">M<span>↗</span></div>
+        </section>
+        <p class="about-endnote">MACROSAP / TECNOLOGÍA CON PROPÓSITO</p>
       </div>
     </section>
     <section class="screen detail-screen" id="faq">
@@ -168,12 +253,109 @@
       </div>
     </section>
   </main>
+  <div class="service-modal" id="serviceModal" aria-hidden="true" inert>
+    <button class="service-modal-backdrop" id="serviceBackdrop" type="button" tabindex="-1" aria-label="Cerrar servicios"></button>
+    <section class="service-dialog" role="dialog" aria-modal="true" aria-labelledby="serviceDialogTitle" tabindex="-1">
+      <div class="service-dialog-topline">
+        <p class="eyebrow">MACROSAP / CAPACIDADES</p>
+        <span id="serviceModalNumber">01 — WEB SYSTEMS</span>
+        <button class="service-dialog-close" id="closeServiceModal" type="button" aria-label="Cerrar servicios">×</button>
+      </div>
+      <p class="service-dialog-kicker" id="serviceModalKicker">SOLUCIONES DIGITALES</p>
+      <h2 id="serviceDialogTitle">Servicios</h2>
+      <p class="service-dialog-intro" id="serviceDialogIntro"></p>
+      <div class="service-accordion-list" id="serviceAccordionList"></div>
+      <footer class="service-dialog-footer">
+        <p>¿No sabes cuál necesitas? Te orientamos para definir el alcance ideal.</p>
+        <button class="service-dialog-quote" id="serviceQuote" type="button">COTIZA TU PROYECTO <b>↗</b></button>
+      </footer>
+    </section>
+  </div>
   <div class="contact-modal" id="contactModal" aria-hidden="true">
-    <div><button id="closeModal">×</button>
-      <p class="eyebrow">CONVERSEMOS</p>
-      <h2>¿Qué quieres<br><em>construir?</em></h2><a href="https://wa.me/525551064052" target="_blank"
-        rel="noopener">ESCRIBIR POR WHATSAPP ↗</a><a href="mailto:macrosap@online.mx">macrosap@online.com</a>
-    </div>
+    <section class="quote-dialog" role="dialog" aria-modal="true" aria-labelledby="quoteTitle">
+      <button class="quote-close" id="closeModal" type="button" aria-label="Cerrar cuestionario">×</button>
+      <div class="quote-topline"><p class="eyebrow">MACROSAP / COTIZACIÓN</p><span id="quoteStepLabel">PASO 1 DE 8</span></div>
+      <div class="quote-progress" aria-hidden="true"><span id="quoteProgress"></span></div>
+      <div id="quoteSteps" aria-live="polite">
+        <div class="quote-step active" data-step="0">
+          <p class="quote-kicker">EMPECEMOS POR LO PRINCIPAL</p><h2 id="quoteTitle" tabindex="-1">¿Qué tipo de proyecto necesitas?</h2>
+          <div class="quote-options">
+            <label><input type="radio" name="project" value="Desarrollo web"><span>Desarrollo web <b>↗</b><small>Sitio, tienda o aplicación</small></span></label>
+            <label><input type="radio" name="project" value="Bases de datos"><span>Bases de datos <b>↗</b><small>Organizar, migrar o analizar información</small></span></label>
+            <label><input type="radio" name="project" value="Control de acceso"><span>Control de acceso <b>↗</b><small>Seguridad, entradas y permisos</small></span></label>
+            <label><input type="radio" name="project" value="Punto de venta"><span>Punto de venta <b>↗</b><small>Ventas, inventario o sucursales</small></span></label>
+            <label><input type="radio" name="project" value="Otro / necesito orientación"><span>Otro / necesito orientación <b>↗</b><small>Cuéntanos tu idea</small></span></label>
+          </div>
+        </div>
+        <div class="quote-step" data-step="1" hidden>
+          <p class="quote-kicker">TU OBJETIVO</p><h2 tabindex="-1">¿Qué te gustaría resolver?</h2>
+          <div class="quote-options quote-options-compact">
+            <label><input type="radio" name="goal" value="Automatizar tareas y ahorrar tiempo"><span>Automatizar tareas y ahorrar tiempo</span></label>
+            <label><input type="radio" name="goal" value="Vender más o mejorar la atención"><span>Vender más o mejorar la atención</span></label>
+            <label><input type="radio" name="goal" value="Tener mi información ordenada y clara"><span>Tener mi información ordenada y clara</span></label>
+            <label><input type="radio" name="goal" value="Proteger y controlar mis espacios"><span>Proteger y controlar mis espacios</span></label>
+            <label><input type="radio" name="goal" value="Aún lo estoy definiendo"><span>Aún lo estoy definiendo</span></label>
+          </div>
+        </div>
+        <div class="quote-step" data-step="2" hidden>
+          <p class="quote-kicker">TAMAÑO DEL PROYECTO</p><h2 tabindex="-1">¿Cuántas personas o ubicaciones lo usarán?</h2>
+          <div class="quote-options quote-options-compact">
+            <label><input type="radio" name="scale" value="Un equipo o una ubicación"><span>Un equipo o una ubicación</span></label>
+            <label><input type="radio" name="scale" value="2 a 5 sucursales o equipos"><span>2 a 5 sucursales o equipos</span></label>
+            <label><input type="radio" name="scale" value="Más de 5 sucursales o equipos"><span>Más de 5 sucursales o equipos</span></label>
+            <label><input type="radio" name="scale" value="No estoy seguro/a"><span>No estoy seguro/a</span></label>
+          </div>
+          <p class="quote-hint">Esto nos ayuda a estimar usuarios, ubicaciones y volumen de operación.</p>
+        </div>
+        <div class="quote-step" data-step="3" hidden>
+          <p class="quote-kicker">LO QUE YA TIENES</p><h2 tabindex="-1">¿Hay sistemas o información que debamos conectar?</h2>
+          <div class="quote-options quote-options-compact">
+            <label><input type="radio" name="systems" value="No, empezamos desde cero"><span>No, empezamos desde cero</span></label>
+            <label><input type="radio" name="systems" value="Sí, usamos hojas de cálculo o procesos manuales"><span>Sí, usamos hojas de cálculo o procesos manuales</span></label>
+            <label><input type="radio" name="systems" value="Sí, ya tenemos software o equipos"><span>Sí, ya tenemos software o equipos</span></label>
+            <label><input type="radio" name="systems" value="No lo sé; necesito que lo revisemos"><span>No lo sé; necesito que lo revisemos</span></label>
+          </div>
+          <p class="quote-hint">No necesitas conocer detalles técnicos; basta con elegir lo que más se acerque.</p>
+        </div>
+        <div class="quote-step" data-step="4" hidden>
+          <p class="quote-kicker">TIEMPOS</p><h2 tabindex="-1">¿Cuándo te gustaría comenzar?</h2>
+          <div class="quote-options quote-options-compact">
+            <label><input type="radio" name="timeline" value="Lo antes posible"><span>Lo antes posible</span></label>
+            <label><input type="radio" name="timeline" value="En 1 a 3 meses"><span>En 1 a 3 meses</span></label>
+            <label><input type="radio" name="timeline" value="En más de 3 meses"><span>En más de 3 meses</span></label>
+            <label><input type="radio" name="timeline" value="Tengo una fecha por definir"><span>Tengo una fecha por definir</span></label>
+          </div>
+        </div>
+        <div class="quote-step" data-step="5" hidden>
+          <p class="quote-kicker">PRESUPUESTO ESTIMADO · MXN</p><h2 tabindex="-1">¿Qué rango tienes en mente?</h2>
+          <div class="quote-options quote-options-compact">
+            <label><input type="radio" name="budget" value="Menos de $25,000"><span>Menos de $25,000</span></label>
+            <label><input type="radio" name="budget" value="$25,000 a $75,000"><span>$25,000 a $75,000</span></label>
+            <label><input type="radio" name="budget" value="$75,000 a $150,000"><span>$75,000 a $150,000</span></label>
+            <label><input type="radio" name="budget" value="Más de $150,000"><span>Más de $150,000</span></label>
+            <label><input type="radio" name="budget" value="Necesito orientación sobre el presupuesto"><span>Necesito orientación sobre el presupuesto</span></label>
+          </div>
+        </div>
+        <div class="quote-step" data-step="6" hidden>
+          <p class="quote-kicker">IMPLEMENTACIÓN Y ACOMPAÑAMIENTO</p><h2 tabindex="-1">¿Qué apoyo esperas de MACROSAP?</h2>
+          <div class="quote-options quote-options-compact">
+            <label><input type="radio" name="support" value="Diseño, desarrollo e implementación"><span>Diseño, desarrollo e implementación</span></label>
+            <label><input type="radio" name="support" value="Instalación y puesta en marcha"><span>Instalación y puesta en marcha</span></label>
+            <label><input type="radio" name="support" value="Capacitación para mi equipo"><span>Capacitación para mi equipo</span></label>
+            <label><input type="radio" name="support" value="Soporte y mejoras después del lanzamiento"><span>Soporte y mejoras después del lanzamiento</span></label>
+            <label><input type="radio" name="support" value="Me gustaría que me orienten"><span>Me gustaría que me orienten</span></label>
+          </div>
+        </div>
+        <div class="quote-step" data-step="7" hidden>
+          <p class="quote-kicker">UN POCO MÁS DE CONTEXTO</p><h2 tabindex="-1">¿Algo más que debamos saber?</h2>
+          <label class="quote-field">Nombre o empresa <span>opcional</span><input id="quoteName" type="text" maxlength="80" placeholder="¿Cómo te llamas?"></label>
+          <label class="quote-field">Cuéntanos brevemente tu idea <span>opcional</span><textarea id="quoteNotes" rows="3" maxlength="500" placeholder="¿Qué te gustaría lograr?"></textarea></label>
+          <p class="quote-privacy">Tus respuestas se abrirán en WhatsApp para que puedas revisarlas antes de enviarlas.</p>
+        </div>
+      </div>
+      <p class="quote-error" id="quoteError" role="alert" hidden>Elige una opción para continuar.</p>
+      <div class="quote-actions"><button class="quote-back" id="quoteBack" type="button" hidden>← ATRÁS</button><button class="quote-next" id="quoteNext" type="button">CONTINUAR <b>→</b></button></div>
+    </section>
   </div>
   <div class="page-transition" id="pageTransition" aria-hidden="true"><span>MACROSAP</span></div>
 
