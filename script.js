@@ -31,6 +31,16 @@ const serviceImageFiles = {
   access: ['access-biometric.svg', 'access-visitor.svg', 'access-realtime.svg', 'access-team.svg'],
   pos: ['pos-terminal.svg', 'pos-receipt.svg', 'pos-branches.svg', 'pos-crm.svg']
 };
+const serviceHeroAssets = {
+  web: [{ src: 'img/services/hero/desarrollo-web.webp', alt: 'Infografía de desarrollo web con navegación, banner, contenido y funciones digitales' }],
+  data: [{ src: 'img/services/hero/bases-de-datos.webp', alt: 'Infografía de arquitectura de base de datos con servidores, consultas, alta disponibilidad y respaldos' }],
+  access: [
+    { src: 'img/services/hero/terminal-reconocimiento-facial.webp', alt: 'Terminal Hikvision para reconocimiento facial y control de acceso' },
+    { src: 'img/services/hero/camara-seguridad.webp', alt: 'Cámara Hikvision con lente de alta definición, visión nocturna y protección IP67' }
+  ],
+  pos: [{ src: 'img/services/hero/punto-de-venta.webp', alt: 'Sistema de punto de venta con pantalla, impresora, caja y terminal de pago' }]
+};
+Object.entries(serviceHeroAssets).forEach(([key, assets]) => { services[key].heroImages = assets; });
 Object.entries(serviceImageFiles).forEach(([key, files]) => {
   const service = services[key];
   service.images = files.map(file => `img/services/${file}`);
@@ -89,7 +99,73 @@ window.addEventListener('touchend', event => {
   edgeSwipeStart = null;
   if (deltaX > 100 && deltaY < 75 && quickEnough && screenHistory.length > 1) history.back();
 }, { passive: true });
-function populateCollage(d) { const imageIds = ['collageMain', 'collageTop', 'collageBottom']; imageIds.forEach((id, index) => { $('#' + id).src = d.images[index]; $('#' + id).alt = d.alts[index] }) }
+function populateCollage(d) {
+  const slots = [
+    { id: 'collageMain', selector: '.collage-main' },
+    { id: 'collageTop', selector: '.collage-top' },
+    { id: 'collageBottom', selector: '.collage-bottom' }
+  ];
+  const hasCustomHero = Array.isArray(d.heroImages);
+  $('#detailVisual').classList.toggle('has-custom-hero', hasCustomHero);
+  slots.forEach(({ id, selector }, index) => {
+    const figure = document.querySelector(selector);
+    const image = $('#' + id);
+    const asset = hasCustomHero ? d.heroImages[index] : (d.images[index] ? { src: d.images[index], alt: d.alts[index] } : null);
+    figure.hidden = !asset;
+    if (!asset) {
+      figure.removeAttribute('role');
+      figure.removeAttribute('aria-label');
+      figure.removeAttribute('tabindex');
+      return;
+    }
+    image.src = asset.src;
+    image.alt = asset.alt;
+    image.loading = hasCustomHero ? 'eager' : 'lazy';
+    if (hasCustomHero) {
+      figure.setAttribute('role', 'button');
+      figure.setAttribute('tabindex', '0');
+      figure.setAttribute('aria-label', `Ampliar imagen: ${asset.alt}`);
+    }
+  });
+}
+const heroLightbox = $('#heroLightbox');
+const heroLightboxImage = $('#heroLightboxImage');
+let heroLightboxOpener = null;
+function openHeroLightbox(image, opener) {
+  if (!image || !heroLightbox) return;
+  heroLightboxOpener = opener;
+  heroLightboxImage.src = image.currentSrc || image.src;
+  heroLightboxImage.alt = image.alt;
+  $('#heroLightboxLabel').textContent = $('#detailLabel').textContent;
+  heroLightbox.classList.add('open');
+  heroLightbox.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('hero-lightbox-open');
+  requestAnimationFrame(() => $('#heroLightboxClose').focus());
+}
+function closeHeroLightbox() {
+  if (!heroLightbox?.classList.contains('open')) return;
+  heroLightbox.classList.remove('open');
+  heroLightbox.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('hero-lightbox-open');
+  heroLightboxOpener?.focus();
+}
+$('#detailVisual').addEventListener('click', event => {
+  const figure = event.target.closest('.collage-card[role="button"]');
+  if (!figure || figure.hidden) return;
+  openHeroLightbox(figure.querySelector('img'), figure);
+});
+$('#detailVisual').addEventListener('keydown', event => {
+  const figure = event.target.closest('.collage-card[role="button"]');
+  if (!figure || (event.key !== 'Enter' && event.key !== ' ')) return;
+  event.preventDefault();
+  openHeroLightbox(figure.querySelector('img'), figure);
+});
+$('#heroLightboxClose').addEventListener('click', closeHeroLightbox);
+$('#heroLightboxBackdrop').addEventListener('click', closeHeroLightbox);
+heroLightbox.addEventListener('keydown', event => {
+  if (event.key === 'Escape') { closeHeroLightbox(); return; }
+  if (event.key === 'Tab') { event.preventDefault(); $('#heroLightboxClose').focus(); }
+});
 const serviceModal = $('#serviceModal');
 let currentService = null;
 let serviceOpener = null;
@@ -151,13 +227,20 @@ function renderServiceAccordion(service) {
     list.append(article);
   });
 }
+function twoToneServiceTitle(title) {
+  const splitAt = title.indexOf(' ');
+  if (splitAt < 0) return title;
+  const lead = title.slice(0, splitAt);
+  const accent = title.slice(splitAt + 1);
+  return `${lead} <span class="service-title-accent">${accent}</span>`;
+}
 function openServiceModal(service, opener = document.activeElement) {
   if (!service) return;
   serviceOpener = opener;
   serviceModal.dataset.service = Object.keys(services).find(key => services[key] === service) || 'web';
   $('#serviceModalNumber').textContent = `${service.number} — ${service.label}`;
   $('#serviceModalKicker').textContent = service.kicker;
-  $('#serviceDialogTitle').textContent = service.drawer;
+  $('#serviceDialogTitle').innerHTML = twoToneServiceTitle(service.drawer);
   $('#serviceDialogIntro').textContent = service.lead;
   renderServiceAccordion(service);
   serviceModal.classList.add('open');
@@ -232,7 +315,7 @@ document.addEventListener('keydown', event => {
   if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
   else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
 });
-document.querySelectorAll('.service-trigger').forEach(btn => btn.addEventListener('click', () => { const d = services[btn.dataset.service]; currentService = d; btn.classList.add('is-selected'); setTimeout(() => btn.classList.remove('is-selected'), 650); $('#detailKicker').textContent = d.kicker; $('#detailTitle').textContent = d.title; $('#detailLead').textContent = d.lead; $('#detailNumber').textContent = d.number; $('#detailLabel').textContent = d.label; $('#detailFoot').textContent = d.foot; populateCollage(d); show('detail') }));
+document.querySelectorAll('.service-trigger').forEach(btn => btn.addEventListener('click', () => { const d = services[btn.dataset.service]; currentService = d; btn.classList.add('is-selected'); setTimeout(() => btn.classList.remove('is-selected'), 650); $('#detailKicker').textContent = d.kicker; $('#detailTitle').innerHTML = twoToneServiceTitle(d.title); $('#detailLead').textContent = d.lead; $('#detailNumber').textContent = d.number; $('#detailLabel').textContent = d.label; $('#detailFoot').textContent = d.foot; populateCollage(d); show('detail') }));
 $('#brandHome').addEventListener('click', event => { event.preventDefault(); show('inicio'); });
 document.querySelectorAll('.back-home').forEach(b => b.addEventListener('click', () => show('inicio'))); $('#backButton').addEventListener('click', () => show('inicio')); $('#aboutButton').addEventListener('click', () => show('about')); $('#faqButton').addEventListener('click', () => show('faq'));
 $('#moreButton').addEventListener('click', () => openServiceModal(currentService));

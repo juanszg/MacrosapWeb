@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MACROSAP</title>
+  <link rel="icon" type="image/jpeg" href="img/marco3.jpeg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -16,8 +17,7 @@
 <body>
   <div class="blueprint"></div>
   <header class="topbar">
-    <a class="brand" id="brandHome" href="#inicio" aria-label="MACROSAP — ir al inicio"><span class="brand-mark">M</span><span>MACROSAP<span
-          class="slash">//</span></span></a>
+    <a class="brand brand-home" id="brandHome" href="#inicio" aria-label="MACROSAP — ir al inicio"><img class="brand-symbol" src="img/marco3.jpeg" alt=""><img class="brand-wordmark" src="img/macro2.jpeg" alt=""></a>
     <div class="top-meta"><span class="live-dot"></span> SOLUCIONES DIGITALES · MX</div>
     <button class="menu-button" id="menuButton" aria-label="Abrir menú" aria-expanded="false" aria-controls="siteMenu"><i></i><i></i><i></i></button>
   </header>
@@ -26,7 +26,7 @@
     <button class="site-menu-backdrop" id="menuBackdrop" type="button" tabindex="-1" aria-label="Cerrar menú"></button>
     <aside class="site-menu-panel" role="dialog" aria-modal="true" aria-labelledby="menuHeading">
       <div class="site-menu-head">
-        <span class="brand"><span class="brand-mark">M</span><span>MACROSAP<span class="slash">//</span></span></span>
+        <button class="site-menu-brand" type="button" data-menu-screen="inicio" aria-label="MACROSAP — ir al inicio"><img src="img/macrosaplogo.jpeg" alt=""></button>
         <button class="site-menu-close" id="closeMenu" type="button" aria-label="Cerrar menú">×</button>
       </div>
       <p class="site-menu-kicker" id="menuHeading">[ NAVEGACIÓN ]</p>
@@ -40,6 +40,7 @@
         <p class="site-menu-kicker">MACROSAP</p>
         <button type="button" data-menu-screen="about"><span>Acerca de nosotros</span><b>05</b></button>
         <button type="button" data-menu-screen="faq"><span>Preguntas frecuentes</span><b>06</b></button>
+        <a class="site-menu-download" href="pdf/MACROSAP_Carta_de_Servicios.pdf" download><span>Descarga nuestra carta de servicios</span><b>↓</b></a>
       </nav>
       <div class="site-menu-contact">
         <p class="site-menu-kicker">HABLEMOS</p>
@@ -61,14 +62,14 @@
         <button class="tile tile-web service-trigger" data-service="web"><span class="tile-index">01</span>
           <span class="tile-icon icon-web" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="m17 14-10 10 10 10M31 14l10 10-10 10M28 9l-8 30"/></svg></span>
           <div><small>PRODUCTO DIGITAL</small>
-            <h2>Desarrollo<br>web</h2>
+            <h2>Desarrollo<br><span class="service-title-accent">web</span></h2>
             <p>Experiencias que convierten.</p>
           </div>
         </button>
         <button class="tile tile-data service-trigger" data-service="data"><span class="tile-index">02</span>
           <span class="tile-icon icon-data" aria-hidden="true"><svg viewBox="0 0 48 48"><ellipse cx="24" cy="11" rx="15" ry="6"/><path d="M9 11v26c0 3 7 6 15 6s15-3 15-6V11M9 20c0 3 7 6 15 6s15-3 15-6M9 29c0 3 7 6 15 6s15-3 15-6"/></svg></span>
           <div><small>ARQUITECTURA</small>
-            <h2>Bases de<br>datos</h2>
+            <h2>Bases<br><span class="service-title-accent">de datos</span></h2>
             <p>Datos listos para decidir.</p>
           </div>
         </button>
@@ -77,7 +78,7 @@
         <button class="tile tile-access service-trigger" data-service="access"><span class="tile-index">03</span>
           <span class="tile-icon icon-access" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 5 39 11v11c0 10-6 17-15 21C15 39 9 32 9 22V11l15-6Z"/><rect x="17" y="21" width="14" height="12" rx="2"/><path d="M20 21v-4a4 4 0 0 1 8 0v4"/></svg></span>
           <div><small>SEGURIDAD FÍSICA</small>
-            <h2>Control de<br>acceso</h2>
+            <h2>Control<br><span class="service-title-accent">de acceso</span></h2>
             <p>Tu operación, conectada.</p>
           </div>
         </button>
@@ -109,7 +110,7 @@
           <span class="tile-index">04</span>
           <span class="tile-icon icon-pos" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M13 7h22v34H13zM18 13h12M18 19h12M18 26h3M24 26h3M30 26h2M18 32h3M24 32h3M30 32h2"/><path d="M17 4h14"/></svg></span>
           <div><small>COMERCIO CONECTADO</small>
-            <h2>Punto de<br>venta</h2>
+            <h2>Punto<br><span class="service-title-accent">de venta</span></h2>
             <p>Vende más. Opera simple.</p>
           </div>
         </button>
@@ -216,12 +217,22 @@
           </div>
         </section>
 
+        <section class="about-download-card" aria-label="Carta de servicios MACROSAP">
+          <div class="about-download-icon" aria-hidden="true">↓</div>
+          <div class="about-download-copy">
+            <p class="eyebrow">MACROSAP / PERFIL CORPORATIVO</p>
+            <h2>Conoce nuestra carta<br><em>de servicios.</em></h2>
+            <p>Consulta nuestro perfil corporativo, capacidades y soluciones en un documento listo para compartir.</p>
+          </div>
+          <a class="about-download-link" href="pdf/MACROSAP_Carta_de_Servicios.pdf" download>DESCARGAR PDF <b>↗</b></a>
+        </section>
+
         <section class="about-potential">
           <div><p class="eyebrow">LO QUE SIGUE / TU EMPRESA</p><h2>Tu siguiente gran paso<br>puede empezar <em>hoy.</em></h2><p>Cuéntanos qué quieres mejorar. Podemos ayudarte a definir un alcance realista y una ruta para llevarlo a cabo.</p></div>
           <button class="about-contact about-potential-button" type="button">COTIZA TU PROYECTO <b>↗</b></button>
           <div class="about-potential-mark" aria-hidden="true">M<span>↗</span></div>
         </section>
-        <p class="about-endnote">MACROSAP / TECNOLOGÍA CON PROPÓSITO</p>
+        <p class="about-endnote"><img src="img/macro2.jpeg" alt="MACROSAP"><span>TECNOLOGÍA CON PROPÓSITO</span></p>
       </div>
     </section>
     <section class="screen detail-screen" id="faq">
@@ -233,22 +244,45 @@
         </div>
         <div class="faq-list">
           <details open>
-            <summary>¿Con qué tipo de empresas trabajan?<b>+</b></summary>
-            <p>Con empresas que quieren digitalizar, ordenar o escalar su operación, sin importar el tamaño de su
-              equipo.</p>
+            <summary><span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18M10 12v2h4v-2"/></svg></span><span class="faq-question">¿Con qué tipo de empresas trabajan?</span><b aria-hidden="true">+</b></summary>
+            <div class="faq-answer"><p>Trabajamos con empresas que buscan <strong class="faq-highlight">digitalizar, ordenar o hacer crecer su operación</strong>, sin importar su tamaño. Adaptamos cada propuesta a sus procesos, objetivos y etapa de crecimiento.</p></div>
           </details>
           <details>
-            <summary>¿Pueden integrarse a mis sistemas actuales?<b>+</b></summary>
-            <p>Sí. Analizamos tu ecosistema actual y diseñamos integraciones seguras para evitar duplicar procesos.</p>
+            <summary><span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m8 12 3 3 5-6"/><path d="M7 4h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/></svg></span><span class="faq-question">¿Pueden integrarse a mis sistemas actuales?</span><b aria-hidden="true">+</b></summary>
+            <div class="faq-answer"><p>Sí. Revisamos las herramientas que ya utilizas y definimos cómo <strong class="faq-highlight">conectarlas de forma segura</strong>, para aprovechar tu inversión y reducir tareas duplicadas.</p></div>
           </details>
           <details>
-            <summary>¿Cuánto tarda un proyecto?<b>+</b></summary>
-            <p>Depende del alcance. Te entregamos un plan de etapas y prioridades antes de iniciar el desarrollo.</p>
+            <summary><span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span class="faq-question">¿Cuánto tarda un proyecto?</span><b aria-hidden="true">+</b></summary>
+            <div class="faq-answer"><p>El tiempo depende del alcance, las integraciones y el equipo requerido. Antes de iniciar, acordamos contigo <strong class="faq-highlight">etapas, prioridades y un calendario realista</strong>.</p></div>
           </details>
           <details>
-            <summary>¿Dan soporte después del lanzamiento?<b>+</b></summary>
-            <p>Claro. Ofrecemos acompañamiento, monitoreo y evolución continua para tu producto.</p>
+            <summary><span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13v-2a8 8 0 0 1 16 0v2"/><path d="M4 13h3v6H6a2 2 0 0 1-2-2v-4ZM20 13h-3v6h1a2 2 0 0 0 2-2v-4ZM17 20a5 5 0 0 1-5 2"/></svg></span><span class="faq-question">¿Dan soporte después del lanzamiento?</span><b aria-hidden="true">+</b></summary>
+            <div class="faq-answer"><p>Sí. Podemos acompañarte después de la puesta en marcha con <strong class="faq-highlight">soporte, mantenimiento y mejoras</strong> para que la solución siga respondiendo a las necesidades de tu operación.</p></div>
           </details>
+          <details>
+            <summary><span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z"/><path d="m19.4 15 .1.1 1.4 1.1-1.4 2.4-1.7-.6a8 8 0 0 1-1.5.9l-.3 1.8h-2.8l-.3-1.8a8 8 0 0 1-1.5-.9l-1.7.6-1.4-2.4 1.4-1.1a7 7 0 0 1 0-1.8l-1.4-1.1 1.4-2.4 1.7.6a8 8 0 0 1 1.5-.9l.3-1.8h2.8l.3 1.8a8 8 0 0 1 1.5.9l1.7-.6 1.4 2.4-1.4 1.1a7 7 0 0 1 0 1.7Z" transform="translate(-1 -1) scale(.95)"/></svg></span><span class="faq-question">¿Ustedes configuran e instalan el equipo?</span><b aria-hidden="true">+</b></summary>
+            <div class="faq-answer"><p>Sí. Nos encargamos de la <strong class="faq-highlight">configuración e instalación</strong> del equipo contemplado en el proyecto. Coordinamos la puesta en marcha para que quede integrado y <strong class="faq-highlight">listo para operar</strong>.</p></div>
+          </details>
+          <details>
+            <summary><span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2M10 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM20 8v6M23 11h-6"/></svg></span><span class="faq-question">¿Ofrecen capacitación para aprender a usarlo?</span><b aria-hidden="true">+</b></summary>
+            <div class="faq-answer"><p>Sí. <strong class="faq-highlight">Capacitamos a las personas que utilizarán la solución</strong>, con <strong class="faq-highlight">una guía práctica</strong> enfocada en sus tareas y procesos cotidianos.</p></div>
+          </details>
+          <details>
+            <summary><span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4M7 8h10M7 12h6"/></svg></span><span class="faq-question">¿También venden el hardware necesario?</span><b aria-hidden="true">+</b></summary>
+            <div class="faq-answer"><p>Sí. Podemos <strong class="faq-highlight">suministrar el hardware requerido</strong> para la solución, <strong class="faq-highlight">recomendar el equipo compatible</strong> y considerar su costo dentro de la propuesta del proyecto.</p></div>
+          </details>
+          <details>
+            <summary><span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4 4L19 6"/><path d="M21 12a9 9 0 1 1-2.6-6.4"/></svg></span><span class="faq-question">¿Pueden revisar o aprovechar el equipo que ya tenemos?</span><b aria-hidden="true">+</b></summary>
+            <div class="faq-answer"><p>Sí. Evaluamos el equipo existente para confirmar <strong class="faq-highlight">compatibilidad</strong> y determinar qué puede <strong class="faq-highlight">conservarse, actualizarse o complementarse</strong>.</p></div>
+          </details>
+          <details>
+            <summary><span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v14H4zM8 9h8M8 13h5M8 17h3"/><path d="m17 16 2 2 3-4"/></svg></span><span class="faq-question">¿Cómo solicito una cotización y qué información necesitan?</span><b aria-hidden="true">+</b></summary>
+            <div class="faq-answer"><p>Cuéntanos <strong class="faq-highlight">qué quieres resolver</strong>, dónde se implementará y cuándo te gustaría comenzar. Si aún no tienes todos los detalles, te ayudamos a <strong class="faq-highlight">definir el alcance</strong> en una primera conversación.</p></div>
+          </details>
+          <div class="faq-endmark" aria-label="Fin de preguntas frecuentes">
+            <span class="faq-endmark-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 1.9 5.8L20 11l-6.1 2.2L12 19l-2-5.8L4 11l6-2.2L12 3Z"/><path d="m19 16 .8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8L19 16Z"/></svg></span>
+            <span>¿Te quedó alguna duda? <b>Estamos para orientarte.</b></span>
+          </div>
         </div>
       </div>
     </section>
@@ -269,6 +303,15 @@
         <p>¿No sabes cuál necesitas? Te orientamos para definir el alcance ideal.</p>
         <button class="service-dialog-quote" id="serviceQuote" type="button">COTIZA TU PROYECTO <b>↗</b></button>
       </footer>
+    </section>
+  </div>
+  <div class="hero-lightbox" id="heroLightbox" aria-hidden="true">
+    <button class="hero-lightbox-backdrop" id="heroLightboxBackdrop" type="button" aria-label="Cerrar imagen ampliada"></button>
+    <section class="hero-lightbox-dialog" role="dialog" aria-modal="true" aria-label="Imagen ampliada" tabindex="-1">
+      <button class="hero-lightbox-close" id="heroLightboxClose" type="button" aria-label="Cerrar imagen ampliada">×</button>
+      <p class="hero-lightbox-label" id="heroLightboxLabel"></p>
+      <img id="heroLightboxImage" alt="">
+      <p class="hero-lightbox-hint">PRESIONA ESC O TOCA FUERA DE LA IMAGEN PARA CERRAR</p>
     </section>
   </div>
   <div class="contact-modal" id="contactModal" aria-hidden="true">
